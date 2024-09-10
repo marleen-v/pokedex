@@ -1,0 +1,12 @@
+.full-width {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fx-col {
+  flex-direction: column;
+}
+
