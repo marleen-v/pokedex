@@ -10,3 +10,52 @@
   flex-direction: column;
 }
 
+.menu-btn {
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #314659;
+  padding: 7px 7px;
+}
+
+.menu-btn:hover {
+  background-color:#40607E ;
+} 
+
+.manu-btn:active {
+  background-color: #FFB800;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.125em;
+  fill:#fff;
+  z-index:2000;
+}
+
+.icon-small{
+  width: 1rem;
+  height: 1rem;
+}
+
+.card-padding {
+  padding: 20px 15px;
+}
+
+.bd-radius-bt {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.bd-radius-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-color {
+  background-color: rgb(95, 166, 175);
+}
+
+
+
