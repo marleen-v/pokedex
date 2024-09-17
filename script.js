@@ -102,45 +102,6 @@ function showStatsInfo(pokedexNr) {
 //to dos:
 
 
-async function showEvoChainInfo(pokedexNr) {
-  const mainInfoRef = document.getElementById("card-info");
-/* 
-  */
-
-  const resSpecies = await fetch(singlePokemonSpecies_URL + pokedexNr.toString()); // to fetch the evolution chain
-  const resSpeciesPokemon = await resSpecies.json();
-
-  const resEvoChain = await fetch(resSpeciesPokemon.evolution_chain.url) 
-  const pokemonSpecies = await resEvoChain.json();
-
-  let nextLevel =  pokemonSpecies.chain.evolves_to;
-  
-  if(nextLevel == []){
-    mainInfoRef.innerHTML = `<div class="flex-center" style="height: 80%;">${pokemon} does not have an evolution chain </div>` ;
-  } else {
-    let pokemon = pokemonSpecies.chain.species.name; //get the name of the first pokemon of the evolution chain
-
-    const resSingle = await fetch(singlePokemon_URL + pokemon.toString()); // to fetch the image
-    const resSinglePokemon = await resSingle.json(); 
-
-    const pokemonImg = resSinglePokemon.sprites.other["official-artwork"].front_default;
-
-    mainInfoRef.innerHTML =  `
-    <div class="flex-center" style="height: 80%;">
-      <div class="evo">
-        <img src="${pokemonImg}" alt="${pokemon}" />
-        <span class="evo-title">${pokemon}</span>
-      </div>
-    </div>
-      ` ;
-/*       for(let nextEbene = 1; nextEbene ){
-
-      } */
-  }
-  
-
-  /* mainInfoRef.innerHTML = renderEvoChainTemplateHTML(pokedexNr, pokemonSpecies); */
-}
 
 
 
